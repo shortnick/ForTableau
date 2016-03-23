@@ -16,8 +16,8 @@ Python Exercise
 	Script that executes and returns a point in poly analysis on two WKT .csv's.
 		*please note: script is written for Python 2.7*
 
-~~PythonExIncomplete.py 
+~~PythonExIncomplete.py~~ 
 
-  A quick and dirty script that reads in and analyzes data, 
+  ~~A quick and dirty script that reads in and analyzes data,~~ 
 
-  but does not yet return a CSV and is not prettified.~~
+  ~~but does not yet return a CSV and is not prettified.~~
