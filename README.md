@@ -11,8 +11,12 @@ Desktop Exercise
 
 Python Exercise
 
-- PythonExIncomplete.py 
+- improvedTabPy.py
+
+	Script that executes and returns a point in poly analysis on two WKT .csv's. 
+
+~~PythonExIncomplete.py 
 
   A quick and dirty script that reads in and analyzes data, 
 
-  but does not yet return a CSV and is not prettified.
+  but does not yet return a CSV and is not prettified.~~
