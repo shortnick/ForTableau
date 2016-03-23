@@ -1,0 +1,61 @@
+Python Coding Homework
+----------------------
+Contained in this exercise are 2 data sets in text delimited format, a point geometry set named 'zip.csv' and a polygon geometry set named 'states.csv'.  Using Python, write a script which analyzes these 2 data sets and creates a new data set named 'stated_points.csv'.  The new set should contain the original fields from 'zip.csv', as well as the 'state' field from the 'states.csv' polygon in which the point lies.
+
+Your code may not use ArcPy, but you may use ANY other Python library or module that you wish.  Your code and the output file it generates should be checked into your Github account.
+
+You will be expected to discuss your code in person with one or more GIS Data Engineers at Tableau.  This is similar to the process we use internally when we develop new utilities for our team to use.
+
+Good luck!
+-------------
+Ref docs
+https://en.wikipedia.org/wiki/Well-known_tetx
+
+GDAL intersection calculation
+http://pcjericks.github.io/py-gdalogr-cookbook/geometry.html#calculate-intersection-between-two-geometries
+
+GDAL writing to WKT
+http://pcjericks.github.io/py-gdalogr-cookbook/geometry.html#write-geometry-to-wkt
+
+#http://stackoverflow.com/questions/14471049/python-2-7-1-how-to-open-edit-and-close-a-csv-file
+#https://dzone.com/articles/python-101-reading-and-writing
+#https://docs.python.org/2/library/csv.html
+
+More Hardcore stuff
+https://pythongisandstuff.wordpress.com/2013/07/10/locating-python-adding-to-path-and-accessing-arcpy/
+https://pythongisandstuff.wordpress.com/2011/07/07/installing-gdal-and-ogr-for-python-on-windows/
+Env/Path vars for python bindings
+http://gis.stackexchange.com/questions/102603/is-there-a-way-to-use-gdal-functions-from-osgeo4w-out-of-their-shell
+------------
+http://gis.stackexchange.com/questions/2276/installing-gdal-with-python-on-windows
+use OSGEO4w shell
+
+open the .csv's in python
+read in each row as a new item in a list? Nope, dictionary, so it has both label and data value
+
+for the states: import each row, string handle state labels as var names, with a wkt-polygon underneath each
+import points as wkts
+
+use ogr intersection tools: iterate over the points list. for each point, calculate true/false intersection by iterating over the set of states. if true, write point to list, with state var name attached (insert new piped section between id number and coords?)
+(* if none, use NA or DC?)
+don't use [intersection, then check (might use http://www.gdal.org/classOGRGeometry.html#a7bbb194937466a6127b5436ac2ae99d9)]
+use the following
+http://www.gdal.org/classOGRGeometry.html#abb4bb4687de9b6f23e61b686177b2856
+
+when finished, write to new csv
+
+================
+import sys
+from sys import osgeo
+from osgeo import ogr
+
+workDir = "C:\Users\Owninator\Documents\TABLEAU APP WORK\python_exercise"
+points="zip.csv"
+states="states.csv"
+
+#http://stackoverflow.com/questions/14471049/python-2-7-1-how-to-open-edit-and-close-a-csv-file
+#https://dzone.com/articles/python-101-reading-and-writing
+#https://docs.pyhton.org/2/library/csv.html
+
+
+C:\Users\Owninator\Documents\TABLEAU APP WORK\python_exercise

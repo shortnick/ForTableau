@@ -64,11 +64,11 @@ def point_reader(file_obj):
 	'''takes in a csv with header id|geometry, geom as WKT'''
 	reader = csv.DictReader(file_obj, delimiter='|')
 	for line in reader:
-		testObj = CreateGeometryFromWkt(line["geometry"])
+		'''testObj = CreateGeometryFromWkt(line["geometry"])
 		if testObj.GetGeometryName() == "POINT":
 			continue
 		else:
-			print "Unexpected format ", line
+			print "Unexpected format ", line'''
 		pointsDict["point"+line["id"]] = PointObj(line["id"], line["geometry"])
 
 def take_file_inputs(inPointsCSV,inStatesCSV):
