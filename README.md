@@ -13,7 +13,8 @@ Python Exercise
 
 - improvedTabPy.py
 
-	Script that executes and returns a point in poly analysis on two WKT .csv's. 
+	Script that executes and returns a point in poly analysis on two WKT .csv's.
+		*please note: script is written for Python 2.7*
 
 ~~PythonExIncomplete.py 
 
