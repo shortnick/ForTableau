@@ -107,7 +107,7 @@ def points_writer(pointsDict, path):
         fieldnames = ['id', 'state', 'geometry']
         
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter='|')
-
+        # there's a stray \n character at ?end of line? in here
         writer.writeheader()
         for point in pointsDict:
                writer.writerow({fieldnames[0]: point.ident, fieldnames[1]: point.state, fieldnames[2]:point.coords})
